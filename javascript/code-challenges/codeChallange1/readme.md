@@ -1,4 +1,4 @@
-# Challenge Title
+# Reverse array
 In this challange i reversed reversed an array.
 
 ## Whiteboard Process
