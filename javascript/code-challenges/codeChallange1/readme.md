@@ -2,7 +2,7 @@
 In this challange i reversed reversed an array.
 
 ## Whiteboard Process
-![Example Image](./img/Product%20Roadmaps(1).jpg)
+![Example Image](./img/Product%20Roadmaps(2).jpg)
 
 ## Approach & Efficiency
 ### The approach 
