@@ -21,3 +21,4 @@ To run your tests
 ### 401 Data Structures, Code Challenges
 
 - [Code Challenge 01 reverse array](./javascript/code-challenges/codeChallange1/readme.md)
+- [Code Challenge 02 insert shift array](./javascript/code-challenges/codeChallange2/readme.md)
