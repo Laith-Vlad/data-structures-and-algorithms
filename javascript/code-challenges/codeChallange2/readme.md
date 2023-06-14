@@ -1,86 +1,62 @@
 # array-insert-shift
-In this challange i reversed reversed an array.
+In this challange i added a value to the middle of the array either by reblacing old values or adding new values.
 
 ## Whiteboard Process
 ![Example Image](./img/Product%20Roadmaps(2).jpg)
 
 ## Approach & Efficiency
 ### The approach 
- taking the array from the back and pushing it in a new array then returnning it.
+i took the array divided it by 2 and set the position i wanted to change then i updated that position with the new value if it is odd and created a new position if it is even.
  ### The big O
- it has only one for loop so O(n)
- The time complexity of the given algorithm is O(n), where n is the length of the input array.
+   - Calculating the middle position: This operation has a constant time complexity of O(1) since it involves a simple arithmetic calculation using the >> operator.
 
-The algorithm iterates through each element of the input array exactly once, starting from the last element and moving towards the first element. Therefore, the time complexity is directly proportional to the size of the input array.
+  -  Replacing the middle value for odd-length arrays: This operation has a constant time complexity of O(1) since it directly updates the value at the middle position.
 
-As a result, the time complexity of the algorithm can be considered linear or O(n), indicating that the time taken to reverse the array grows linearly with the size of the input array.
-### recursion 
-tried it but the code is much longer and more complex and the big O is the same 
-```javascript
-function reverseArray(array) {
-  if (array.length <= 1) {
-    return array;
-  }
+   - Updating the right side for even-length arrays: This operation involves shifting the elements to the right and inserting the new value. In the worst case scenario, it requires shifting approximately n/2 elements, where n is the length of the array. This gives it a linear time complexity of O(n).
 
-  const firstElement = array[0];
-  const remainingArray = [];
-  for (let i = 1; i < array.length; i++) {
-    remainingArray.push(array[i]);
-  }
-  const reversedArray = reverseArray(remainingArray);
 
-  reversedArray.push(firstElement);
-  return reversedArray;
-}
-```
 
 ## Solution
 
-  Standard input and output:
+ Test case 1: Odd-length array
 
 ```javascript
 
-console.log(reverseArray([1, 2, 3, 4, 5])); // Output: [5, 4, 3, 2, 1]
+let oddArray = [1, 2, 3, 4, 5];
+let newValue1 = 10;
+updateArrayValue(oddArray, newValue1);  // [1, 2, 10, 4, 5]
+
 ```
-Standard input with a different output:
+Test case 2: Even-length array
 
 ```javascript
 
-console.log(reverseArray(['a', 'b', 'c'])); // Output: ['c', 'b', 'a']
+
+let evenArray = [1, 2, 3, 4, 5, 6];
+let newValue2 = 20;
+updateArrayValue(evenArray, newValue2); // [1, 2, 3, 20, 4, 5, 6]
 ```
-Edge case: Empty array:
+Test case 3: Empty array
 
 ```javascript
-
-console.log(reverseArray([])); // Output: []
+// 
+let emptyArray = [];
+let newValue3 = 30;
+updateArrayValue(emptyArray, newValue3); // Invalid position
 ```
  Edge case: Array with a single element:
 
 ```javascript
 
-console.log(reverseArray([6])); // Output: [6]
+let singleArray = [10];
+let newValue4 = 40;
+updateArrayValue(singleArray, newValue4); // [40]
 ```
-Edge case: Array is already sorted:
+Edge case: Array is with 2 elements
 
 ```javascript
 
-console.log(reverseArray([1, 2, 3, 4, 5])); // Output: [5, 4, 3, 2, 1]
-```
-Edge case: Null input:
-
-```javascript
-
-console.log(reverseArray(null)); // Output: []
-```
-Edge case: Negative numbers:
-
-```javascript
-
-console.log(reverseArray([-1, -2, -3, -4, -5])); // Output: [-5, -4, -3, -2, -1]
-```
-Edge case: Zero:
-
-```javascript
-
-console.log(reverseArray([0])); // Output: [0]
+let twoArray = [50, 60];
+let newValue5 = 70;
+updateArrayValue(twoArray, newValue5); // [50, 70, 60]
 ```
