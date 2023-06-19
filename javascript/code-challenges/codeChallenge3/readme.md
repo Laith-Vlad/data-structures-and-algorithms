@@ -1,5 +1,6 @@
 # Linked list
-
+ 
+- [link to code](./linkedList.js)
 
 
 ## Approach & Efficiency
