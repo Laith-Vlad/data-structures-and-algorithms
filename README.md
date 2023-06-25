@@ -25,4 +25,4 @@ To run your tests
 - [Code Challenge 03 Linked list](./javascript/code-challenges/codeChallenge3/readme.md)
 - [Code Challenge 04 Binary Search](./javascript/code-challenges/codeChallenge4/readme.md)
 - [Code Challenge 05 Febotcini Seqiuance](./javascript/code-challenges/codeChallange5/readme.md)
--  [Code Challenge 05 Febotcini Seqiuance](./javascript/code-challenges/codeChallenge6/read.md)
+-  [Code Challenge 06 Linked list manipulation](./javascript/code-challenges/codeChallenge6/read.md)
