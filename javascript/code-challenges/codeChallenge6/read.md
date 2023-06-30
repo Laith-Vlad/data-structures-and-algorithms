@@ -1,5 +1,5 @@
-# Code Challenge: Class 06 
-Extend a Linked List to allow various insertion methods.
+# Code Challenge: Class 07 
+Extend a Linked List to allow various insertion methods. getting k-th value from the end of a linked list.
 
 ## Approach & Efficiency
 append(newValue):
