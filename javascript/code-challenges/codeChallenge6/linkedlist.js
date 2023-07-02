@@ -75,26 +75,26 @@ class LinkedList {
       throw new Error("Invalid value for k. k must be a non-negative integer.");
     }
 
-    let slow = this.head;
-    let fast = this.head;
+    let length = 0;
+    let current = this.head;
 
-    for (let i = 0; i < k; i++) {
-      if (fast === null) {
-        throw new Error(`k is greater than the length of the linked list.`);
-      }
-      fast = fast.next;
+    while (current !== null) {
+      length++;
+      current = current.next;
     }
 
-    while (fast.next !== null) {
-      slow = slow.next;
-      fast = fast.next;
+    if (k >= length) {
+      throw new Error("The linked list length is smaller than k.");
     }
 
-    if (slow === null) {
-      throw new Error(`k is greater than the length of the linked list.`);
+    current = this.head;
+    let targetPosition = length - k - 1;
+
+    for (let i = 0; i < targetPosition; i++) {
+      current = current.next;
     }
 
-    return slow.value;
+    return current.value;
   }
 }
 
