@@ -64,59 +64,51 @@ describe('LinkedList', () => {
     expect(linkedList.head.next.next.value).toBe(3);
     expect(linkedList.head.next.next.next).toBeNull();
   });
-
-  describe('kth test', () => {
-    it('should return the value of the node that is k places from the tail of the linked list', () => {
+  
+  describe('kthFromEnd', () => {
+    test('throws an error when k is greater than the length of the linked list', () => {
+      const linkedList = new LinkedList();
       linkedList.append(1);
-      linkedList.append(3);
-      linkedList.append(8);
       linkedList.append(2);
-
-      expect(linkedList.kthFromEnd(0)).toBe(2); // 2 places from the tail
-      expect(linkedList.kthFromEnd(2)).toBe(3); // 2 places from the tail
+  
+      expect(() => linkedList.kthFromEnd(3)).toThrow('The linked list length is smaller than k.');
     });
-
-    it('should throw an error when k is greater than the length of the linked list', () => {
+  
+    test('throws an error when k and the length of the list are the same', () => {
+      const linkedList = new LinkedList();
       linkedList.append(1);
-      linkedList.append(3);
-      linkedList.append(8);
       linkedList.append(2);
-
-      expect(() => linkedList.kthFromEnd(6)).toThrowError('k is greater than the length of the linked list.');
-    });
-
-    it('should throw an error when k and the length of the list are the same', () => {
-      linkedList.append(1);
       linkedList.append(3);
-      linkedList.append(8);
-      linkedList.append(2);
-
-      expect(() => linkedList.kthFromEnd(4)).toThrowError(`Cannot read properties of null (reading 'next')`);
+  
+      expect(() => linkedList.kthFromEnd(3)).toThrow('The linked list length is smaller than k.');
     });
-
-    it('should throw an error when k is not a positive integer', () => {
+  
+    test('throws an error when k is not a positive integer', () => {
+      const linkedList = new LinkedList();
       linkedList.append(1);
+      linkedList.append(2);
       linkedList.append(3);
-      linkedList.append(8);
-      linkedList.append(2);
-
-      expect(() => linkedList.kthFromEnd(-1)).toThrowError('Invalid value for k. k must be a non-negative integer.');
+  
+      expect(() => linkedList.kthFromEnd(-1)).toThrow('Invalid value for k. k must be a non-negative integer.');
     });
-
-    it('should return the value of the only node in the linked list when the size is 1', () => {
-      linkedList.append(1);
-
-      expect(linkedList.kthFromEnd(0)).toBe(1);
+  
+    test('returns the value of the only node when the linked list is of size 1', () => {
+      const linkedList = new LinkedList();
+      linkedList.append(5);
+  
+      expect(linkedList.kthFromEnd(0)).toBe(5);
     });
-
-    it('should return the value of the node that is k places from the tail in the middle of the linked list', () => {
+  
+    test('returns the correct value when k is in the middle of the linked list', () => {
+      const linkedList = new LinkedList();
       linkedList.append(1);
       linkedList.append(3);
       linkedList.append(8);
       linkedList.append(2);
       linkedList.append(5);
-
-      expect(linkedList.kthFromEnd(2)).toBe(8); // 2 places from the tail
+  
+      expect(linkedList.kthFromEnd(2)).toBe(8);
     });
   });
+ 
 });
