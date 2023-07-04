@@ -1,6 +1,7 @@
 # Code Challenge: Class 07 
 Extend a Linked List to allow various insertion methods. getting k-th value from the end of a linked list.
-
+## whiteboard
+![Example Image](./Product%20Roadmaps(9).jpg)
 ## Approach & Efficiency
 append(newValue):
 
