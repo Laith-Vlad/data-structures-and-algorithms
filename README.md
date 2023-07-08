@@ -29,5 +29,6 @@ To run your tests
 - [Code Challenge 06 Linked list](./javascript/code-challenges/codeChallenge6//read.md)
 - [Code Challenge 08 Linked list](./javascript/code-challenges/codeChallange8/readme.md)
 
--  [Code Challenge 07 Linked list manipulation](./javascript/code-challenges/codeChallenge6/read.md)
+- [Code Challenge 07 Linked list manipulation](./javascript/code-challenges/codeChallenge6/read.md)
+- [Code Challenge 10 Linked list Stacks and Queues](./javascript/code-challenges/codeChallange10/readme.md)
 
