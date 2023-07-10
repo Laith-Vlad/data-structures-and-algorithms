@@ -31,5 +31,5 @@ To run your tests
 
 - [Code Challenge 07 Linked list manipulation](./javascript/code-challenges/codeChallenge6/read.md)
 - [Code Challenge 10 Linked list Stacks and Queues](./javascript/code-challenges/codeChallange10/readme.md)
-- [Code Challenge 10 Linked list Stacks and Queues](./javascript/code-challenges/codeChallange11/readme.md)
+- [Code Challenge 11 Linked list Stacks and  pusedo Queues](./javascript/code-challenges/codechallange11/readme.md)
 
