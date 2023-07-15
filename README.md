@@ -34,5 +34,6 @@ To run your tests
 - [Code Challenge 11 Linked list Stacks and  pusedo Queues](./javascript/code-challenges/codechallange11/readme.md)
 - [Code Challenge 12 animal shelter queues](./javascript/code-challenges/codeChallange12/readme.md)
 - [Code Challenge 13 Bracket authinticator](./javascript/code-challenges/codeChallange13/readme.md)
+- [Code Challenge 13 Bracket authinticator](./javascript/code-challenges/codeChallange14/readme.md)
 
 
