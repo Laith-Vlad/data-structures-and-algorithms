@@ -57,6 +57,18 @@ class BinarySearchTree extends BinaryTree {
 
     return searchNode(this.root, value);
   }
+  findMaximumValue() {
+    if (!this.root) {
+      return null;
+    }
+
+    let current = this.root;
+    while (current.right) {
+      current = current.right;
+    }
+
+    return current.value;
+  }
 }
 
 module.exports = BinarySearchTree;
