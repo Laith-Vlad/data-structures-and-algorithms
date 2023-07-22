@@ -78,4 +78,16 @@ describe('Binary Tree and Binary Search Tree Testing', () => {
     expect(tree.contains(3)).toBeFalsy();
     expect(tree.contains(5)).toBeFalsy();
   });
+  it('Can successfully find the maximum value in a Binary Search Tree', () => {
+    const tree = new BST();
+    tree.add(4);
+    tree.add(2);
+    tree.add(6);
+    tree.add(10);
+    tree.add(5);
+    tree.add(8);
+
+    const maxVal = tree.findMaximumValue();
+    expect(maxVal).toEqual(10);
+  });
 });

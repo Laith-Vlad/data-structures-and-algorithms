@@ -1,6 +1,7 @@
-# Tree code challange
+# Tree code 14 and 16 challange
 ## Whiteboard Process
-![Example Image](./img/Product%20Roadmaps(15).jpg)
+![14](./img/Product%20Roadmaps(15).jpg)
+![16](./img/Product%20Roadmaps(17).jpg)
 
 
 ## Approach:
@@ -26,6 +27,8 @@ Binary Search Tree
         Contains
             Argument: value
             Returns: boolean indicating whether or not the value is in the tree at least once.
+            find max vauleue function
+            it keeps going right till it finds the last right value and returns it.
 
 
 
