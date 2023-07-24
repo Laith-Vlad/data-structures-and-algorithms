@@ -36,5 +36,8 @@ To run your tests
 - [Code Challenge 13 Bracket authinticator](./javascript/code-challenges/codeChallange13/readme.md)
 - [Code Challenge 15-16 Trees](./javascript/code-challenges/codeChallange14/readme.md)
 
+- [Code Challenge 17 Trees breadth first](./javascript/code-challenges/codeChallange17/readme.md)
+
+
 
 
