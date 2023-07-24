@@ -32,4 +32,7 @@ To run your tests
 - [Code Challenge 07 Linked list manipulation](./javascript/code-challenges/codeChallenge6/read.md)
 - [Code Challenge 10 Linked list Stacks and Queues](./javascript/code-challenges/codeChallange10/readme.md)
 - [Code Challenge 11 Linked list Stacks and  pusedo Queues](./javascript/code-challenges/codechallange11/readme.md)
-
+- [Code Challenge 12 animal shelter queues](./javascript/code-challenges/codeChallange12/readme.md)
+- [Code Challenge 13 Bracket authinticator](./javascript/code-challenges/codeChallange13/readme.md)
+- [Code Challenge 15-16 Trees](./javascript/code-challenges/codeChallange14/readme.md)
+- [Code Challenge 17 Trees breadth first](./javascript/code-challenges/codeChallange17/readme.md)
