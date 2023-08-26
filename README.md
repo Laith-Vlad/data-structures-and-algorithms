@@ -37,3 +37,5 @@ To run your tests
 - [Code Challenge 15-16 Trees](./javascript/code-challenges/codeChallange14/readme.md)
 - [Code Challenge 17 Trees breadth first](./javascript/code-challenges/codeChallange17/readme.md)
 - [Code Challenge 18 fuzzBuzz using tree](./javascript/code-challenges/codeChallange18/readme.md)
+- [Code Challenge 26 sorted array ](./javascript/code-challenges/challange26/readme.md)
+- [Code Challenge 27 sort merge  ](./javascript/code-challenges/challange27/readme.md)
