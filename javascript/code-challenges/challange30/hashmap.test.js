@@ -1,4 +1,4 @@
-const Hashmap = require('./Hash');
+const Hashmap = require('./Hashmab');
 
 describe('Hashmap Tests', () => {
   let HashTable;
