@@ -61,13 +61,13 @@ class Hashmab {
   }
 }
 module.exports = Hashmab;
-// const HashTable = new Hashmab(19);
+const HashTable = new Hashmab(19);
 
 // console.log(HashTable.hash("Rama")); // Rama saved --> index 12
 
-// HashTable.set("Basha", "Student");
-// HashTable.set("Saleh", "Student");
-// HashTable.set("Anas", "Student");
+HashTable.set("100", "Student");
+HashTable.set("50", "Student");
+HashTable.set("30", "Student");
 // HashTable.set("Farah", "Student");
 // HashTable.set("Rama", "Student");
 // HashTable.set("Waleed", "Instructor");
@@ -77,6 +77,6 @@ module.exports = Hashmab;
 // console.log(HashTable.get("Saleh"));
 // console.log(HashTable.has("Saleh"));
 // // console.log(HashTable.has("soso"));
-// HashTable.map.forEach((data, i) => {
-//   console.log(i, data && data.values());
-// });
+HashTable.map.forEach((data, i) => {
+  console.log(i, data && data.values());
+});

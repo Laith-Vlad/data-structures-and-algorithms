@@ -1,6 +1,6 @@
 #  repated word using hash map
 ## Whiteboard Process
-![Example Image](./assets/repeated%20words.jpg)
+![Example Image](./assets/repeated words(1).jpg)
 
 ## Approach:
 so we start by using regex to remove the clutter then we create a hashmap for the words array 
