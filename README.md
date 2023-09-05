@@ -41,5 +41,10 @@ To run your tests
 
 - [Code Challenge 26 sorted array ](./javascript/code-challenges/challange26/readme.md)
 - [Code Challenge 27 sort merge  ](./javascript/code-challenges/challange27/readme.md)
+
+- [Code Challenge 28 insertion sort  ](./javascript/code-challenges/challange29/readme.md)
 -  [Code Challenge 30 hash table   ](./javascript/code-challenges/challange30/readme.md)
+- [Code Challenge 31 insertion sort  ](./javascript/code-challenges/challange31/readme.md)
+
+
 
