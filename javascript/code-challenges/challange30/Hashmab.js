@@ -28,15 +28,15 @@ class Hashmab {
     console.log(entry);
     this.map[index].add(entry);
   }
-  get(key) {
-    // let name = key
+ get(key) {
     const index = this.hash(key);
-    let list = this.map[index];
+    const list = this.map[index];
 
-    console.log("dodododdo", list.getValue(key));
+    if (!list) {
+      return null;
+    }
+
     return list.getValue(key);
-
-    // return value.index;
   }
   has(key) {
     let index = this.hash(key);
