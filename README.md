@@ -42,3 +42,4 @@ To run your tests
 - [Code Challenge 28 insertion sort  ](./javascript/code-challenges/challange29/readme.md)
 
 - [Code Challenge 31 insertion sort  ](./javascript/code-challenges/challange31/readme.md)
+- [Code Challenge 32 interconected tree  ](./javascript/treeIntersection/readme.md)
