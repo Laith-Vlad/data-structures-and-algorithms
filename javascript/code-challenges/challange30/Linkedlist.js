@@ -31,8 +31,7 @@ class LinkedList {
 
     return values;
   }
-  getValue(key) {
-    // console.log("llllllll",current.value[key])
+getValue(key) {
     let current = this.head;
     while (current) {
       if (current.value[key]) {
@@ -40,8 +39,10 @@ class LinkedList {
       }
       current = current.next;
     }
-    return;
+
+    return null;
   }
+
 
   find(key) {
     let current = this.head;

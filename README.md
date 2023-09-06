@@ -35,11 +35,17 @@ To run your tests
 - [Code Challenge 12 animal shelter queues](./javascript/code-challenges/codeChallange12/readme.md)
 - [Code Challenge 13 Bracket authinticator](./javascript/code-challenges/codeChallange13/readme.md)
 - [Code Challenge 15-16 Trees](./javascript/code-challenges/codeChallange14/readme.md)
+
 - [Code Challenge 17 Trees breadth first](./javascript/code-challenges/codeChallange17/readme.md)
 - [Code Challenge 18 fuzzBuzz using tree](./javascript/code-challenges/codeChallange18/readme.md)
+
 - [Code Challenge 26 sorted array ](./javascript/code-challenges/challange26/readme.md)
 - [Code Challenge 27 sort merge  ](./javascript/code-challenges/challange27/readme.md)
-- [Code Challenge 28 insertion sort  ](./javascript/code-challenges/challange29/readme.md)
 
+- [Code Challenge 28 insertion sort  ](./javascript/code-challenges/challange29/readme.md)
+-  [Code Challenge 30 hash table   ](./javascript/code-challenges/challange30/readme.md)
 - [Code Challenge 31 insertion sort  ](./javascript/code-challenges/challange31/readme.md)
-- [Code Challenge 32 interconected tree  ](./javascript/treeIntersection/readme.md)
+- [Code Challenge 32 trees intersection  ](./javascript/treeIntersection/readme.md)
+
+
+
