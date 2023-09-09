@@ -45,7 +45,5 @@ To run your tests
 - [Code Challenge 28 insertion sort  ](./javascript/code-challenges/challange29/readme.md)
 -  [Code Challenge 30 hash table   ](./javascript/code-challenges/challange30/readme.md)
 - [Code Challenge 31 insertion sort  ](./javascript/code-challenges/challange31/readme.md)
-- [Code Challenge 32 trees intersection  ](./javascript/treeIntersection/readme.md)
-
-
-
+- [Code Challenge 32 interconected tree  ](./javascript/treeIntersection/readme.md)
+- [Code Challenge 33 graphs tree  ](./javascript/graphs/readme.md)
