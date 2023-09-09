@@ -1,44 +1,51 @@
-const Hashmab = require('./Hashmab');
+const Hashmap = require('./Hashmab');
 
-describe('Hashmab', () => {
-  let hashTable;
+describe('Hashmap Tests', () => {
+  let HashTable;
 
   beforeEach(() => {
-    hashTable = new Hashmab(19);
+    HashTable = new Hashmap(19);
   });
 
-  test('should set and get values', () => {
-    hashTable.set('Basha', 'Student');
-    hashTable.set('Saleh', 'Student');
-    hashTable.set('Anas', 'Student');
-    hashTable.set('Farah', 'Student');
-    hashTable.set('Rama', 'Student');
-    hashTable.set('Waleed', 'Instructor');
-
-    expect(hashTable.get('Basha')).toBe('Student');
-    expect(hashTable.get('Saleh')).toBe('Student');
-    expect(hashTable.get('Anas')).toBe('Student');
-    expect(hashTable.get('Farah')).toBe('Student');
-    expect(hashTable.get('Rama')).toBe('Student');
-    expect(hashTable.get('Waleed')).toBe('Instructor');
+  test('1. Setting a key/value to the hashtable', () => {
+    HashTable.set('Ahmed', 'Student');
+    expect(HashTable.get('Ahmed')).toBe('Student');
   });
 
-  test('should correctly check if a key exists', () => {
-    hashTable.set('Basha', 'Student');
-    hashTable.set('Saleh', 'Student');
-
-    expect(hashTable.has('Basha')).toBe(true);
-    expect(hashTable.has('Saleh')).toBe(true);
-    expect(hashTable.has('Anas')).toBe(false);
+  test('2. Retrieving value based on a key', () => {
+    HashTable.set('Ali', 'Instructor');
+    expect(HashTable.get('Ali')).toBe('Instructor');
   });
 
-  test('should retrieve all keys', () => {
-    hashTable.set('Basha', 'Student');
-    hashTable.set('Saleh', 'Student');
+  test('3. Returning null for a key that does not exist', () => {
+    expect(HashTable.get('NonExistent')).toBeNull();
+  });
 
-    const keys = hashTable.keys();
-    expect(keys).toContain('Basha');
-    expect(keys).toContain('Saleh');
-    expect(keys).not.toContain('Anas');
+  test('4. Returning a list of all unique keys', () => {
+    HashTable.set('Basha', 'Student');
+    HashTable.set('Saleh', 'Student');
+    HashTable.set('Anas', 'Student');
+    const keys = HashTable.keys();
+    expect(keys).toEqual(expect.arrayContaining(['Basha', 'Saleh', 'Anas']));
+  });
+
+  test('5. Handling collision within the hashtable', () => {
+    HashTable.set('Ali', 'Instructor');
+    HashTable.set('Amir', 'Instructor');
+    expect(HashTable.get('Ali')).toBe('Instructor');
+    expect(HashTable.get('Amir')).toBe('Instructor');
+  });
+
+  test('6. Retrieving value from a bucket with collision', () => {
+    HashTable.set('Rami', 'Student');
+    HashTable.set('Amir', 'Instructor');
+    expect(HashTable.get('Rami')).toBe('Student');
+    expect(HashTable.get('Amir')).toBe('Instructor');
+  });
+
+  test('7. Hashing key to an in-range value', () => {
+    const hashedIndex = HashTable.hash('Rama');
+    expect(hashedIndex).toBeGreaterThanOrEqual(0);
+    expect(hashedIndex).toBeLessThan(HashTable.size);
   });
 });
