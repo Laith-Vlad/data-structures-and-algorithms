@@ -23,12 +23,14 @@ class Hashmap {
     console.log(entry);
     this.map[index].add(entry);
   }
+
   get(key) {
     const index = this.hash(key);
     const list = this.map[index];
     if (!list) {
       return null;
     }
+
     return list.getValue(key);
   }
   has(key) {
