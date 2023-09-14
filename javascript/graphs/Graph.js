@@ -1,7 +1,7 @@
 "use strict";
 
 const Edge = require("./Edge");
-const Vertext = require("./Vertex");
+const Vertex = require("./Vertex");
 
 class Graph {
   constructor() {
@@ -13,35 +13,60 @@ class Graph {
   }
 
   addEdge(start, end, weight) {
-    if (!this.adjacencyList.has(start) && !this.adjacencyList.has(end)) { // we need an end and start
-      return;
+    if (!this.adjacencyList.has(start) || !this.adjacencyList.has(end)) {
+      throw new Error("Start or end vertex does not exist in the graph.");
     }
-    const startVertex = this.adjacencyList.get(start);
+    const startVertexEdges = this.adjacencyList.get(start);
     const edge = new Edge(end, weight);
-
-    startVertex.push(edge);
+    startVertexEdges.push(edge);
   }
-  getVertex() {
-    const Vertexs = [];
-    for (const [vertex, edges] of this.adjacencyList) {
-      Vertexs.push(vertex.value);
+
+  getVertices() {
+    const vertices = [];
+    for (const vertex of this.adjacencyList.keys()) {
+      vertices.push(vertex.value);
     }
-    return Vertexs;
+    return vertices;
   }
   getNeighbors(vertex) {
-    const Neighbors = this.adjacencyList.get(vertex);
+    if (!this.adjacencyList.has(vertex)) {
+      throw new Error("Vertex not found in the graph.");
+    }
+
+    const neighbors = this.adjacencyList.get(vertex);
     const arr = [];
-    for (let i = 0; i < Neighbors.length; i++) {
-      arr.push(Neighbors[i].vertex);
+    for (const neighborEdge of neighbors) {
+      arr.push(neighborEdge.vertex);
     }
     return arr;
   }
+
   size() {
-    let counter = 0;
-    for (const vertex of this.adjacencyList.entries()) {
-      counter++;
+    return this.adjacencyList.size;
+  }
+
+  breadthFirst(startNode) {
+    let queue = [];
+    let visitedNodes = new Set();
+    let result = [];
+    queue.push(startNode);
+    visitedNodes.add(startNode);
+
+    result.push(startNode.value);
+
+    while (queue.length) {
+      const currentNode = queue.shift();
+      const neighbors = this.getNeighbors(currentNode);
+      for (let neighbor of neighbors) {
+        const neighborNode = neighbor.vertex;
+        if (!visitedNodes.has(neighborNode)) {
+          visitedNodes.add(neighborNode);
+          result.push(neighborNode.value);
+          queue.push(neighborNode);
+        }
+      }
     }
-    return counter;
+    return result;
   }
 }
 
